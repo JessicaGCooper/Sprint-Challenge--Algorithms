@@ -54,7 +54,7 @@ ANSWER: O(n)
 ## Exercise II
 
 
-If you have an n-story building and dropped eggs are NOT broken on floors below floor f, but are broken are floors f and above, in order to minize the number of broken eggs while finding f:
+If you have an n-story building and dropped eggs are NOT broken on floors below floor f, but are broken are floors f and above, in order to minize the number of broken eggs while finding f AND apparantly to minizie number of dropped eggs:
 
 A building's floors are in numerical order.  This is a sorted list.  The list can iterated over.  I must make an assumption that information on whether or not an egg will broken when dropped each floor is provided in some form. 
 
@@ -69,14 +69,24 @@ def find_floor(dictionary):
 create a list of all values in the dictionary using the .values() method and the list method
   values = list(dictionary.values())
 
-  for i in range(0, len(values)-1):
-    if values[i] == True:
-      return i + 1 (must add one to index number to accurately reflect floor number of f)
+Find the middle value by integer division.
+    mid = len(values)//2
+First check mid
+    if values[mid] == True:
+Move left from mid until you find False
+      for i in range(mid, -1):
+        if values[i] == False:
+          return i + 2 (i will be index of floor below floor f so add 1 to get to index floor f, than add 1 again to get floor f's true value)
+    elif values[mid] == False:
+Move right from mid until you find True
+       for j in range(mid, len(values)-1):
+        if values[j] == True
+          return i + 1 (must add one to index number to accurately reflect floor number of f)
 
-This should find the first instance of True, so only one egg will break before finding f.
+By starting in the middle you will drop the least number of eggs, and by moving right first (per condition) you will minimize breakage as well. 
 
 Time complexity is O(1) for using the .values() method, but O(n) for using the list() method
-Then O(n) for iterating over values
+Then O(n) for iterating over values, since only one loop will be used depending the value of mid, that loop will be O(n)
 Add --> O(2n) --> drop constant --> O(n)
 
 Time Complexity = O(n)
