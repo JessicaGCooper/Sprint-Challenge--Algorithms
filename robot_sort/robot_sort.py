@@ -98,7 +98,7 @@ class SortingRobot:
         """
         # Fill this out
         
-    # The robot can move left or right, it can pick up an item(the first item will be the only one that can be picked up without a swap). Before choosing to swap items (pick up) it can compare items.  For some reason it has a boolean switch (maybe for counter?).
+    # The robot can move left or right, it can pick up an item(the first item will be swapped with None, but don't forget the robot is holding the true value :) ). Before choosing to swap items (pick up) it can compare items.  For some reason it has a boolean switch (maybe for counter?).
     # 1. The robot has a starting point, 0
     # 2. the robot should pick up l[0]
     # 3. The robot should move right
