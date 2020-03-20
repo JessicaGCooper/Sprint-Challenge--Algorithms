@@ -7,9 +7,6 @@ word = 'thingith'
 
 def count_th(word):
     count = 0
-    # result = word.find('th')
-    # return result
-    # TBC
     
     if len(word) < 2:
         return count
@@ -20,7 +17,8 @@ def count_th(word):
         else:
             word = word[1:]
         
-    count_th(word)
+    count = count + count_th(word)
+    return count
 
 print(count_th(word))
 
