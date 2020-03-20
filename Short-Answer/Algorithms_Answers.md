@@ -66,8 +66,8 @@ create a function that takes in the dictionary
 
 def find_floor(dictionary):
 
-create a list of all values in the dictionary using the .values() method
-  values = dictionary.values()
+create a list of all values in the dictionary using the .values() method and the list method
+  values = list(dictionary.values())
 
   for i in range(0, len(values)-1):
     if values[i] == True:
@@ -75,7 +75,7 @@ create a list of all values in the dictionary using the .values() method
 
 This should find the first instance of True, so only one egg will break before finding f.
 
-Time complexity should be O(n) for using the .values() method
+Time complexity is O(1) for using the .values() method, but O(n) for using the list() method
 Then O(n) for iterating over values
 Add --> O(2n) --> drop constant --> O(n)
 
