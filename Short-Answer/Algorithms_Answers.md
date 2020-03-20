@@ -54,3 +54,33 @@ ANSWER: O(n)
 ## Exercise II
 
 
+If you have an n-story building and dropped eggs are NOT broken on floors below floor f, but are broken are floors f and above, in order to minize the number of broken eggs while finding f:
+
+A building's floors are in numerical order.  This is a sorted list.  The list can iterated over.  I must make an assumption that information on whether or not an egg will broken when dropped each floor is provided in some form. 
+
+This could be a dictionary with key, value pairs such that:
+  floors = {1: False, 2: False, 3: False, 4: True, 5: True}  
+such that there are 5 floors and floor 4 is floor f.
+
+create a function that takes in the dictionary
+
+def find_floor(dictionary):
+
+create a list of all values in the dictionary using the .values() method
+  values = dictionary.values()
+
+  for i in range(0, len(values)-1):
+    if values[i] == True:
+      return i + 1 (must add one to index number to accurately reflect floor number of f)
+
+This should find the first instance of True, so only one egg will break before finding f.
+
+Time complexity should be O(n) for using the .values() method
+Then O(n) for iterating over values
+Add --> O(2n) --> drop constant --> O(n)
+
+Time Complexity = O(n)
+      
+
+
+    
