@@ -27,22 +27,22 @@ b)
 O(1)
 O(n)
   O(1)
-   O(n)
-    0(2)
+  O(n)
+    0(2n)
     O(1)   
 
 O(1)
 O(n)
   O(1)
    O(n)
-    O(3)
+    O(2n)
 O(1)
 O(n)
-  O(3n)
+  O(2n^2)
 
-O(1) + O(3n^2)
+O(1) + O(2n^3)
 
-ANSWER: O(n^2)
+ANSWER: O(n^3)
 
 c)
 

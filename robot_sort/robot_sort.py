@@ -105,6 +105,7 @@ class SortingRobot:
     # 4. The robot should compare what it's holding with current position/item
     # 5. If held item is greater, pick up/swap current item, else, move right
         for i in range(0, len(l)-1):
+           self.swap_item() 
 
 
 
