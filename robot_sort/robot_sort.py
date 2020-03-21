@@ -97,7 +97,16 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        
+    # The robot can move left or right, it can pick up an item(the first item will be swapped with None, but don't forget the robot is holding the true value :) ). Before choosing to swap items (pick up) it can compare items.  For some reason it has a boolean switch (maybe for counter?).
+    # 1. The robot has a starting point, 0
+    # 2. the robot should pick up l[0]
+    # 3. The robot should move right
+    # 4. The robot should compare what it's holding with current position/item
+    # 5. If held item is greater, else, move right
+        for i in range(0, len(l)-1):
+           
+
 
 
 if __name__ == "__main__":
