@@ -103,7 +103,7 @@ class SortingRobot:
     # 2. the robot should pick up l[0]
     # 3. The robot should move right
     # 4. The robot should compare what it's holding with current position/item
-    # 5. If held item is lesser, pick up/swap current item(dropping lesser item and picking up greater item), else, move right
+    # 5. If held item is greater, else, move right
         for i in range(0, len(l)-1):
            
 
